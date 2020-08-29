@@ -11,7 +11,12 @@ let person = {
   education: "Graduate",
   jobDesignation: "Software Developer",
   shortBio() {
-    const { firstName, lastName, nickName, age } = this;
+    const {
+      firstName,
+      lastName,
+      nickName,
+      age
+    } = this;
     return `My Short Bio Is ${firstName} ${lastName} ${nickName} ${age}`;
   },
   fullBio() {
@@ -30,3 +35,6 @@ let person = {
 };
 console.log(person.shortBio());
 console.log(person.fullBio());
+
+//This (Invocation Context)
+'strict';
