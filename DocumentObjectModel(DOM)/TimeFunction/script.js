@@ -1,22 +1,25 @@
 //Set Timeout
-let text = document.querySelector('#text');
-
-setTimeout(() => {
-    console.log(text)
-}, 2000);
-
+let setFunct = () => {
+    console.log("Function Started");
+}
+setTimeout(setFunct, 1000);
 
 //Set Interval
-let counter = document.querySelector('#counter');
-let count = 1;
+let setInter = () => {
+    console.log("Function Started");
+}
+setInterval(setInter, 1000);
 
-setInterval(() => {
-    if (count < 100) {
-        count++;
-        counter.innerText = count;
+//Clear Interval
+var intervalId;
+var count = 0;
+
+let sayHello = () => {
+    count++;
+    if (count > 5) {
+        clearInterval(intervalId);
     }
-}, 4);
+    console.log(`Count Started ` + count);
+}
 
-setTimeout(() => {
-    alert('Timer Completed')
-}, 1000);
+intervalId = setInterval(sayHello, 1000);
