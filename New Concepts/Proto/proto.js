@@ -1,16 +1,14 @@
 //Declaring a constructor evoking function
-var User = function (firstName, jobDesignation, yearOfExperience) {
+var User = function (firstName, jobDesignation, getYearsOfExperience) {
     this.firstName = firstName;
     this.jobDesignation = jobDesignation;
-    this.yearOfExperience = yearOfExperience;
+    this.getYearsOfExperience = getYearsOfExperience;
 }
 
 //Declaring a proto for injecting new properties in source object
-User.prototype.yearsOfExperience = function () {
-    console.log(`Years Of Experience : ${this.yearOfExperience}`);
+User.prototype.getYearsOfExperience = () => {
+    console.log(`Years Of Experience are : ${this.getYearsOfExperience}`);
 }
 
-var userOne = new User('Suyash', 'Front-End Developer', 3);
-console.log(userOne.yearsOfExperience());
-var userTwo = new User('Soham', 'Territory Sales Manager', 1);
-console.log(userTwo.yearsOfExperience());
+var userOne = new User("Suyash", "Front-end Developer", "4");
+console.log(userOne.getYearsOfExperience);
