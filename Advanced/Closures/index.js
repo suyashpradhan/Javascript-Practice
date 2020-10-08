@@ -6,7 +6,7 @@ function init() {
         console.log(`Hello ${firstName}`);
     }
 
-    sayHello();
+    return sayHello
 }
 
 init();
