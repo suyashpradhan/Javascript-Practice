@@ -10,3 +10,14 @@ function init() {
 }
 
 init();
+
+
+//Closure Example
+function addition(x) {
+    return function (y) {
+        return x + y;
+    }
+}
+
+let add = addition(5);
+console.log(add(5));
