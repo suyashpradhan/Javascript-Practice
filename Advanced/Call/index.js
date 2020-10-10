@@ -14,10 +14,5 @@ const nameObjTwo = {
     role: 'Sub-Admin',
 }
 
-//Using IIFE
-nameObjOne.getInfo.bind(nameObjTwo)();
-
-//Using Variable
-let infoTwo = nameObjOne.getInfo.bind(nameObjTwo);
-console.log(typeof infoTwo);
-infoTwo();
+let infoTwo = nameObjOne.getInfo.call(nameObjTwo);
+console.log(infoTwo);
