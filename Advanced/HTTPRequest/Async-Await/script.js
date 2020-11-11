@@ -9,7 +9,6 @@ async function addNumber(x, y) {
     return x + y;
   }
 }
-
 addNumber(7, 4)
   .then((res) => {
     console.log("Promise Resolved with :", res);
@@ -18,12 +17,12 @@ addNumber(7, 4)
     console.log("Promise Rejected with :", err);
   });
 
-async function randomUser() {
-  const response = await fetch("https://randomuser.me/api/");
-  const randomData = await response.json();
-  console.log(randomData);
-}
+//!Await keyword with AXIOS
+let fakeAPI = async () => {
+  const res = await axios.get("https://randomuser.me/api");
+  console.log(res.data);
+};
 
-randomUser().catch((err) => {
-  console.log(err);
+fakeAPI().catch((err) => {
+  console.log(`Error`, err);
 });
