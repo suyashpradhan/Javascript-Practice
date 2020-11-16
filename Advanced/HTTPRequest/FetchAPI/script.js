@@ -1,5 +1,5 @@
 //! USING XHR
-/* function generateJokesFunc() {
+function generateJokesFunc() {
   const xhr = new XMLHttpRequest();
   xhr.onload = function () {
     const data = JSON.parse(xhr.responseText);
@@ -12,7 +12,7 @@
   xhr.open("GET", `http://api.icndb.com/jokes/random/2`, true);
   xhr.send();
 }
-generateJokesFunc(); */
+generateJokesFunc();
 
 //? USING FETCH API
 fetch("http://aapi.icndb.com/jokes/random/2")
