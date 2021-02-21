@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", getTodos);
 function getTodos() {
   let localData = JSON.parse(localStorage.getItem("todos"));
   localData.map((item) => {
-    outputEl.innerHTML = `<h2>${item.title}</h2><p>${item.message}</p>`;
+    let parentDiv = document.createElement("div");
+    heading.textContent = item.title;
+    outputEl.appendChild(heading);
   });
 }
